@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.7",
@@ -20,7 +20,9 @@
     "ethers": "^6.15.0",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
+    "morgan": "^1.10.1",
     "multer": "^2.0.2",
+    "mysql2": "^3.14.5",
     "web3id": "^1.0.18"
   },
   "devDependencies": {

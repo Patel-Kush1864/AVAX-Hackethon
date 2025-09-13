@@ -114,19 +114,27 @@
       </p> -->
     </div>
 
+    <!-- Flash Messages -->
+    <% if (error_msg && error_msg.length > 0) { %>
+      <div class="alert alert-danger"><%= error_msg %></div>
+    <% } %>
+    <% if (success_msg && success_msg.length > 0) { %>
+      <div class="alert alert-success"><%= success_msg %></div>
+    <% } %>
+
     <form action="/register" method="POST" class="row g-3">
       <!-- Name Fields -->
       <div class="col-md-4">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter first name" required />
+        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Enter first name" required />
       </div>
       <div class="col-md-4">
         <label for="middleName">Middle Name</label>
-        <input type="text" id="middleName" name="middleName" class="form-control" placeholder="Enter middle name" />
+        <input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Enter middle name" />
       </div>
       <div class="col-md-4">
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Enter last name" required />
+        <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Enter last name" required />
       </div>
 
       <!-- Gender + Nationality -->
@@ -170,7 +178,7 @@
       </div>
       <div class="col-md-6">
         <label for="phone">Phone No.</label>
-        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required />
+        <input type="text" id="phone_no" name="phone_no" class="form-control" placeholder="Enter phone number" required />
       </div>
 
       <!-- Email + Password -->
