@@ -1,45 +1,84 @@
 <%- include('partials/header', { title: 'Home', active: 'home' }) %>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <h1>Welcome to <span class="text-warning">Versatile.ID</span></h1>
-    <p class="lead">Blockchain-Powered Digital Identity & Cryptocurrency Security</p>
-    <a href="/login" class="btn btn-glow mt-4">Start Your Web3 Journey</a>
-  </div>
-</section>
-
-<!-- Features -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-light">Why Versatile.ID?</h2>
-      <p class="text-muted">One platform for your Blockchain & Crypto Identity</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="https://img.icons8.com/fluency/96/lock.png" alt="Secure">
-          <h4>🔐 Secure Identity</h4>
-          <p>End-to-end encrypted blockchain-based identity system for Web3 security.</p>
+<!-- Hero Section -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'electric-blue': '#00D4FF',
+                        'cyber-purple': '#8B5CF6',
+                        'dark-purple': '#4C1D95',
+                        'neon-blue': '#0EA5E9',
+                        'space-black': '#0F0F23',
+                        'dark-slate': '#1E1E3F',
+                    }
+                }
+            }
+        }
+    </script>
+    <section class="gradient-bg min-h-screen flex items-center relative overflow-hidden">
+        <!-- Background Illustration -->
+        <div class="absolute inset-0 opacity-10 overflow-hidden">
+            <!-- Floating particles -->
+            <div class="absolute top-20 left-10 w-2 h-2 bg-electric-blue rounded-full parallax-slow"></div>
+            <div class="absolute top-40 right-20 w-3 h-3 bg-cyber-purple rounded-full parallax-medium"></div>
+            <div class="absolute top-60 left-1/4 w-1 h-1 bg-electric-blue rounded-full parallax-fast"></div>
+            <div class="absolute top-80 right-1/3 w-2 h-2 bg-cyber-purple rounded-full parallax-slow"></div>
+            <div class="absolute bottom-40 left-20 w-2 h-2 bg-electric-blue rounded-full parallax-medium"></div>
+            <div class="absolute bottom-60 right-10 w-1 h-1 bg-cyber-purple rounded-full parallax-fast"></div>
+            
+            <!-- Orbiting elements -->
+            <div class="absolute top-1/3 left-1/4">
+                <div class="orbit-animation">
+                    <div class="w-4 h-4 bg-gradient-to-r from-electric-blue to-cyber-purple rounded-full cyber-glow"></div>
+                </div>
+            </div>
+            <div class="absolute top-2/3 right-1/4">
+                <div class="orbit-animation-reverse">
+                    <div class="w-3 h-3 bg-gradient-to-r from-cyber-purple to-electric-blue rounded-full cyber-glow"></div>
+                </div>
+            </div>
+            
+            <svg class="w-full h-full" viewBox="0 0 1200 800" fill="none">
+                <!-- Blockchain nodes -->
+                <circle cx="200" cy="150" r="4" fill="#00D4FF" class="floating-animation parallax-slow"/>
+                <circle cx="400" cy="200" r="4" fill="#8B5CF6" class="floating-animation parallax-medium"/>
+                <circle cx="600" cy="120" r="4" fill="#00D4FF" class="floating-animation parallax-fast"/>
+                <circle cx="800" cy="180" r="4" fill="#8B5CF6" class="floating-animation parallax-slow"/>
+                <circle cx="1000" cy="140" r="4" fill="#00D4FF" class="floating-animation parallax-medium"/>
+                
+                <!-- Connection lines -->
+                <path d="M200 150 L400 200 L600 120 L800 180 L1000 140" stroke="#00D4FF" stroke-width="1" opacity="0.6" class="parallax-medium"/>
+                <path d="M200 150 L600 120" stroke="#8B5CF6" stroke-width="1" opacity="0.4" class="parallax-slow"/>
+                <path d="M400 200 L800 180" stroke="#00D4FF" stroke-width="1" opacity="0.4" class="parallax-fast"/>
+                
+                <!-- Wallet icons -->
+                <rect x="180" y="130" width="40" height="40" rx="8" fill="none" stroke="#00D4FF" stroke-width="2" class="floating-animation parallax-medium"/>
+                <rect x="580" y="100" width="40" height="40" rx="8" fill="none" stroke="#8B5CF6" stroke-width="2" class="floating-animation parallax-slow"/>
+                <rect x="980" y="120" width="40" height="40" rx="8" fill="none" stroke="#00D4FF" stroke-width="2" class="floating-animation parallax-fast"/>
+                
+                <!-- Additional animated elements -->
+                <circle cx="100" cy="300" r="2" fill="#8B5CF6" opacity="0.7" class="floating-animation parallax-fast"/>
+                <circle cx="300" cy="350" r="3" fill="#00D4FF" opacity="0.5" class="floating-animation parallax-slow"/>
+                <circle cx="500" cy="400" r="2" fill="#8B5CF6" opacity="0.6" class="floating-animation parallax-medium"/>
+                <circle cx="700" cy="320" r="2" fill="#00D4FF" opacity="0.8" class="floating-animation parallax-fast"/>
+                <circle cx="900" cy="380" r="3" fill="#8B5CF6" opacity="0.4" class="floating-animation parallax-slow"/>
+                <circle cx="1100" cy="350" r="2" fill="#00D4FF" opacity="0.7" class="floating-animation parallax-medium"/>
+            </svg>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="https://img.icons8.com/fluency/96/blockchain.png" alt="Blockchain">
-          <h4>⛓️ Blockchain Powered</h4>
-          <p>Decentralized trust powered by Ethereum, Polygon & Avalanche networks.</p>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                     Welcome to <span class="text-electric-blue neon-text">Web3 Identity</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                   Blockchain-Powered Digital Identity & Cryptocurrency Security
+                </p>
+                <a href="/login" class="btn btn-glow mt-4">Start Your Web3 Journey</a>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="https://img.icons8.com/fluency/96/bitcoin.png" alt="Crypto">
-          <h4>💰 Crypto Ready</h4>
-          <p>Integrate wallets like MetaMask & Coinbase for seamless authentication.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <%- include('partials/footer') %>
