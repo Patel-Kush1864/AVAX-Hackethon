@@ -1,0 +1,104 @@
+<%- include('partials/header', { title: 'Login', active: '' }) %>
+
+<div class="login-card mx-auto mt-5">
+  <h2>Login to Versatile.ID</h2>
+
+  <!-- Login Form -->
+  <form action="/login" method="POST" class="mt-4">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <button type="submit" class="btn btn-glow mt-3 w-100">Login</button>
+  </form>
+
+  <p class="text-center mt-3 text-white">
+    Don't have an account? <a href="/register" class="text-warning">Sign Up</a>
+  </p>
+</div>
+
+<!-- Optional background hero effect similar to home page -->
+<style>
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  }
+
+  .login-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 400px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 120px;
+  }
+
+  .login-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 35px rgba(255,255,255,0.3);
+  }
+
+  .login-card h2 {
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+  }
+
+  .form-control {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+  .form-control:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #ff6a00;
+    box-shadow: 0 0 10px rgba(255,106,0,0.5);
+    color: #fff;
+  }
+
+  .btn-glow {
+    background: linear-gradient(45deg, #ff6a00, #ee0979, #00c6ff);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 0;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255,255,255,0.6);
+  }
+
+  a.text-warning:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-card {
+      margin-top: 60px;
+      padding: 2rem;
+    }
+    .login-card h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<%- include('partials/footer') %>
