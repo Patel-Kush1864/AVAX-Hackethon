@@ -57,6 +57,11 @@ app.get("/login", (req, res) => {
   res.render("login", { error_msg: req.flash("error_msg") });
 });
 
+
+app.get("/login-web3id", (req, res) => {
+  res.render("login-web3id", { error_msg: req.flash("error_msg") });
+});
+
 app.post("/login", (req, res) => {
   // TODO: Add authentication
   res.redirect("/");

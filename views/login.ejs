@@ -122,30 +122,45 @@
 
   <!-- Login card -->
   <div class="login-card mx-auto">
-    <h2 class="text-center mb-4">Welcome Back</h2>
+    <!-- Logo / Brand -->
+    <div class="mb-6 text-center">
+      <div class="mx-auto mb-2 h-16 w-16 flex items-center justify-center">
+        <img src="/images/versatile.id.png" alt="Versatile ID Logo" class="h-18 w-18 object-contain rounded-full">
+      </div>
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Welcome Back</h2>
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        Sign in to access your dashboard
+      </p>
+    </div>
 
     <form action="/login" method="POST" class="row g-3">
       <div class="col-12">
-        <input type="email" name="email" class="form-control" placeholder="Email" required />
+        <label for="email" class="block text-sm mb-1">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="you@example.com" required />
       </div>
       <div class="col-12">
-        <input type="password" name="password" class="form-control" placeholder="Password" required minlength="6" />
+         <label for="password" class="block text-sm mb-1">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="••••••••" required minlength="6" />
       </div>
 
-      <div class="col-12 text-end">
-        <a href="/forgot-password" class="text-sm text-electric-blue">Forgot Password?</a>
+        <!-- Remember me + Forgot password -->
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" name="remember" class="w-4 h-4 text-indigo-600 bg-gray-800 border-gray-600 rounded focus:ring-indigo-500">
+          <span>Remember me</span>
+        </label>
+        <a href="/forgot-password" class="text-electric-blue hover:underline">Forgot Password?</a>
       </div>
 
       <div class="col-12 text-center">
-        <button type="submit" class="btn btn-glow w-100">Login</button>
+        <button type="submit" class="btn btn-glow w-100">sign In</button>
       </div>
 
       <div class="col-12 text-center">
         <p class="my-2">or</p>
-        <button type="button" class="btn-google w-100">
-          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
-          Sign in with Google
-        </button>
+        <div class="col-12 text-center">
+          <a href="/login-web3id" class="btn btn-glow w-100" >Sign with Web3Id</a>
+        </div>
       </div>
 
       <div class="col-12 text-center mt-3">
