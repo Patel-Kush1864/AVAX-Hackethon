@@ -59,20 +59,12 @@
     text-shadow: 0 0 15px rgba(0,212,255,0.7);
   }
 
-  /* Inputs */
-  .form-control, .form-select {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #000000;
-    border-radius: 12px;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
+  
+  .form-select option {
+    background: #0F0F23; /* fallback when dropdown expands */
+    color: #fff;
   }
-  .form-control:focus, .form-select:focus {
-    border-color: #00d4ff;
-    box-shadow: 0 0 12px rgba(0,212,255,0.7);
-    background: rgba(255, 255, 255, 0.15);
-  }
+
   ::placeholder { color: rgba(255, 255, 255, 0.7); }
   option { color: #000; }
 
@@ -98,6 +90,8 @@
     text-decoration: none;
   }
   .form-check-label a:hover { text-decoration: underline; }
+
+  
 
   @media (max-width: 768px) {
     .register-card { padding: 1.5rem; }
