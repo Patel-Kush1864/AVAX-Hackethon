@@ -1,0 +1,45 @@
+<%- include('partials/header', { title: 'Your Web3ID', active: '' }) %>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-900 via-indigo-900 to-black text-white px-4">
+  <div class="max-w-lg w-full text-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-10 animate-fadeIn">
+    
+    <!-- Success Icon -->
+    <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg mb-6">
+      <i class="fas fa-check text-4xl text-white"></i>
+    </div>
+
+    <h1 class="text-3xl font-bold mb-3">🎉 Registration Successful!</h1>
+    <p class="text-gray-300 mb-6">Welcome 
+      <span class="text-cyan-400 font-semibold">
+        
+      </span>
+    </p>
+
+    <!-- Web3ID Card -->
+    <div class="bg-gradient-to-r from-cyan-500 to-purple-600 p-6 rounded-xl shadow-lg mb-6">
+      <p class="text-sm text-white/80">Your Web3ID</p>
+      <h2 class="text-4xl font-extrabold tracking-wide mt-2"></h2>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/login" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 font-semibold transition">
+        Login Now
+      </a>
+      <a href="/" class="px-6 py-3 rounded-lg bg-purple-500 hover:bg-purple-600 font-semibold transition">
+        Go to Home
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+</style>
